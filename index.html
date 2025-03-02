@@ -148,36 +148,10 @@
         .about p {
             font-size: 1.1rem; /* Reduced font size */
             text-align: center;
-            max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Skills Section */
-        .skills {
-            text-align: center;
-        }
-
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background: #2a2a2b; /* Darker background */
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #f2f2f2; /* Light text color */
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .skill-tag:hover {
-            background: #00E5FF; /* Teal accent color */
-            color: #272729; /* Dark text color */
-            transform: translateY(-3px);
-        }
+       
 
         /* Experience Section */
         .experience {
@@ -186,7 +160,6 @@
 
         .timeline {
             position: relative;
-            max-width: 800px;
             margin: 0 auto;
             padding: 20px 0; /* Reduced padding */
         }
@@ -211,6 +184,7 @@
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
         }
 
         .timeline-item:hover {
@@ -312,7 +286,6 @@
             color: #f2f2f2; /* Light text color */
         }
 
-        /* Certifications Section */
 /* Certifications Section */
 .certifications-grid {
     display: grid;
@@ -355,6 +328,37 @@
     margin-bottom: 10px;
 }
 
+
+    /* skills Section */
+    .skills {
+        text-align: center;
+        padding: 20px 0; /* Reduced padding */
+    }
+    
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px; /* Increased spacing */
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .skill-tag {
+        background-color: #2c2c2c;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 500;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+        background-color: #00d1ff;
+        color: #000;
+    }
+
         /* Contact Section */
         .contact {
             text-align: center;
@@ -391,6 +395,7 @@
             font-size: 0.9rem;
             color: #f2f2f2; /* Light text color */
         }
+        
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
@@ -414,10 +419,11 @@
     <header>
         <div class="container">
             <div class="profile-section">
-                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+                <img src="./portfolio/assets/prof-photo-v5.png" alt="Profile Picture" class="profile-img">
                 <div class="profile-info">
                     <h1>Keshav Agrawal</h1>
-                    <p>Professor of Artificial Intelligence at Stanford AI Lab</p>
+                    <p><strong>Senior Salesforce Developer and Consultant</strong></p>
+                    <p>Senior Salesforce Developer with In-depth Knowledge of Salesforce Platform Tools and Technologies including Apex, LWC, Aura, Flows, Apex Triggers, JavaScript, Field Service Lightning, Omnistudio/Vlocity, Conga and Salesforce Integrations.</p>
                     <div class="social-links">
                         <a href="https://linkedin.com/in/keshav-agrawal99" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="http://github.com/keshav012" target="_blank"><i class="fab fa-github"></i></a>
@@ -429,29 +435,90 @@
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About</h2>
-            <p>Keshav Agrawal is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing, and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.</p>
-        </div>
-    </section>
-
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
             <h2>Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Chief Scientist - OpenAI</h3>
-                    <p>Leading research initiatives in artificial intelligence and machine learning.</p>
-                    <p class="date">Jan 2020 - Present</p>
+                    <h3>Senior Salesforce Developer</h3>
+                    <p><i class="fas fa-briefcase"></i>  <strong>  Innovior Probe CX</strong></p>
+                    <p class="date"><i class="fas fa-calendar-alt"></i>  Sep 2023 - Present</p>
                 </div>
                 <div class="timeline-item">
-                    <h3>Professor - Stanford AI Lab</h3>
-                    <p>Teaching and conducting research in AI and robotics.</p>
-                    <p class="date">Aug 2015 - Dec 2019</p>
+                    <h3>Senior Salesforce Developer</h3>
+                    <p><i class="fas fa-briefcase"></i>  <strong>  Nagarro Software</strong></p>
+                    <p class="date"><i class="fas fa-calendar-alt"></i>  Aug 2022 - Sep 2023</p>
                 </div>
+                <div class="timeline-item">
+                    <h3>Salesforce Developer</h3>
+                    <p><i class="fas fa-briefcase"></i>  <strong>  Metacube Software</strong></p>
+                    <p class="date"><i class="fas fa-calendar-alt"></i>  Aug 2020 - Sep 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project">
+                <h3><i class="fas fa-cloud"></i> Salesforce Health Cloud Solutions</h3>
+                <ul class="project-details">
+                    <li><i class="fas fa-code"></i> <strong>Technologies Used:</strong> LWC, Apex, OmniStudio, Conga</li>
+                    <li><i class="fas fa-server"></i> Built and deployed <strong>custom Salesforce solutions</strong> on Health Cloud.</li>
+                    <li><i class="fas fa-laptop-code"></i> <strong>Demonstrated expertise</strong> in Sales, Service, and Experience Cloud.</li>
+                    <li><i class="fas fa-user-graduate"></i> Mentored and <strong>guided junior developers</strong>, fostering a learning environment.</li>
+                    <li><i class="fas fa-comments"></i> Collaborated with stakeholders to <strong>gather requirements & define specifications</strong>.</li>
+                    <li><i class="fas fa-shield-alt"></i> Ensured compliance with <strong>Salesforce security standards & best practices</strong>.</li>
+                    <li><i class="fas fa-check-circle"></i> Conducted <strong>code reviews, testing, and deployments</strong> for high-quality delivery.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3><i class="fas fa-cogs"></i> Salesforce Development & Implementation</h3>
+                <ul class="project-details">
+                    <li><i class="fas fa-tasks"></i> Worked on <strong>full application development lifecycle</strong>: Analysis, Design, Coding, Testing & Implementation.</li>
+                    <li><i class="fas fa-microchip"></i> Extensive experience with <strong>Apex, triggers, batch Apex, Visualforce</strong>.</li>
+                    <li><i class="fas fa-database"></i> Strong understanding of <strong>Salesforce data model</strong>, custom objects, and relationships.</li>
+                    <li><i class="fas fa-users"></i> Effective communicator with <strong>business and development teams</strong>.</li>
+                    <li><i class="fas fa-code-branch"></i> Experience with <strong>Object-Oriented development & design patterns</strong>.</li>
+                    <li><i class="fas fa-upload"></i> Expertise in <strong>complex enterprise deployment & Force.com Metadata API</strong>.</li>
+                    <li><i class="fas fa-exchange-alt"></i> Built integrations using <strong>SFDC Web Services API & third-party tools</strong>.</li>
+                    <li><i class="fas fa-tools"></i> Hands-on experience in <strong>Agile methodologies & continuous improvements</strong>.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3><i class="fas fa-wrench"></i> Custom Salesforce Feature Development</h3>
+                <ul class="project-details">
+                    <li><i class="fas fa-laptop-code"></i> Responsible for developing <strong>custom features</strong> on the Salesforce platform based on client requirements.</li>
+                    <li><i class="fas fa-code"></i> Used <strong>Apex, Flows, LWC, Aura, HTML, CSS, and Triggers</strong> for development.</li>
+                    <li><i class="fas fa-lightbulb"></i> Conducted <strong>technical analysis and solution designing</strong> for scalable implementations.</li>
+                    <li><i class="fas fa-server"></i> Deployed features across <strong>various environments</strong>, from developer sandbox to production.</li>
+                    <li><i class="fas fa-tools"></i> Ensured <strong>best practices and code optimization</strong> for performance and maintainability.</li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+     <!-- Skills Section -->
+     <section id="skills" class="projects">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-list">
+                <span class="skill-tag">Salesforce</span>
+                <span class="skill-tag">Apex</span>
+                <span class="skill-tag">Lightning Web Components (LWC)</span>
+                <span class="skill-tag">OmniStudio</span>
+                <span class="skill-tag">Visualforce</span>
+                <span class="skill-tag">SOQL & SOSL</span>
+                <span class="skill-tag">Salesforce Data Model</span>
+                <span class="skill-tag">REST & SOAP APIs</span>
+                <span class="skill-tag">Agile Methodologies</span>
+                <span class="skill-tag">HTML & CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">CI/CD & Deployment</span>
             </div>
         </div>
     </section>
@@ -461,27 +528,14 @@
         <div class="container">
             <h2>Education</h2>
             <div class="degree">
-                <h3>PhD in Artificial Intelligence - Stanford University</h3>
-                <p>Graduated with honors.</p>
+                <h3>B.Tech / B.E. in Computer Science</h3>
+                <p><strong>Graduated with Honors</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan, India</p>
             </div>
             <div class="degree">
-                <h3>MEng in Artificial Intelligence - MIT</h3>
-                <p>Specialized in machine learning.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Self-Reconfiguring Robots</h3>
-                <p>Developed autonomous robots capable of reconfiguring their structure.</p>
-            </div>
-            <div class="project">
-                <h3>Mobile Sensor Networks</h3>
-                <p>Designed networks for real-time environmental monitoring.</p>
+                <h3>Higher School</h3>
+                <p><strong>Specialized in Science</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan, India</p>
             </div>
         </div>
     </section>
@@ -493,34 +547,46 @@
             <div class="certifications-grid">
                 <div class="certification-card">
                     <div class="badge">CERTIFIED</div>
-                    <h3>Associate</h3>
+                    <h3>Architect</h3>
+                    <p>Sharing and Visibility Architect</p>
+                </div>
+                <div class="certification-card">
+                    <div class="badge">CERTIFIED</div>
+                    <h3>Developer</h3>
                     <p>Platform Developer I</p>
                 </div>
                 <div class="certification-card">
                     <div class="badge">CERTIFIED</div>
-                    <h3>Administrator</h3>
-                    <p>App Builder</p>
-                </div>
-                <div class="certification-card">
-                    <div class="badge">CERTIFIED</div>
-                    <h3>Platform</h3>
+                    <h3>Developer</h3>
                     <p>OmniStudio Developer</p>
                 </div>
+                
                 <div class="certification-card">
                     <div class="badge">CERTIFIED</div>
-                    <h3>Sharing and Visibility</h3>
-                    <p>Architect</p>
+                    <h3>Develper</h3>
+                    <p>Salesforce Certified Health cloud developer</p>
                 </div>
                 <div class="certification-card">
                     <div class="badge">CERTIFIED</div>
-                    <h3>Health Cloud</h3>
-                    <p>Developer I</p>
+                    <h3>Consultant</h3>
+                    <p>Salesforce Certified Data cloud consultant</p>
                 </div>
                 <div class="certification-card">
-                    <div class="badge">ACCREDITED</div>
-                    <h3>Platform</h3>
-                    <p>App Builder</p>
+                    <div class="badge">CERTIFIED</div>
+                    <h3>Administrator</h3>
+                    <p>Salesforce App Builder</p>
                 </div>
+                <div class="certification-card">
+                    <div class="badge">CERTIFIED</div>
+                    <h3>Administrator</h3>
+                    <p>Salesforce Certified Administrator</p>
+                </div>
+                <div class="certification-card">
+                    <div class="badge">CERTIFIED</div>
+                    <h3>Administrator</h3>
+                    <p>Salesforce Associate</p>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -530,12 +596,18 @@
         <div class="container">
             <h2>Contact</h2>
             <p>If you are interested in collaborating or hiring me for a project, feel free to reach out.</p>
-            <button onclick="location.href='mailto:chien.wu@example.com'">Contact Me</button>
+            <button onclick="location.href='mailto:keshavagrawalkka1999@gmail.com'">Contact Me</button>
         </div>
     </section>
     <footer>
         <div class="container">
-            <p>&copy; 2023 Keshav Agrawal. All rights reserved.</p>
+            <p>&copy; 2025 Keshav Agrawal. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/keshav-agrawal99" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="http://github.com/keshav012" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/Keshav_agrawal9" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:keshavagrawalkka1999@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
 </body>
