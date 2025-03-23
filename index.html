@@ -289,7 +289,7 @@
 /* Certifications Section */
 .certifications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -307,10 +307,16 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
+.certification-img {
+    width: 90px; /* Reduced size */
+    height: 90px; /* Reduced size */
+    margin-bottom: 10px;
+}
+
 .certification-card h3 {
-    font-size: 1.2rem; /* Reduced font size */
+    font-size: 1rem; /* Reduced font size */
     margin: 0 0 10px;
-    color: #00E5FF; /* Teal accent color */
+    
 }
 
 .certification-card p {
@@ -319,13 +325,7 @@
 }
 
 .certification-card .badge {
-    font-size: 0.9rem;
     color: #fff;
-    background: #00E5FF; /* Teal badge background */
-    padding: 5px 10px;
-    border-radius: 20px;
-    display: inline-block;
-    margin-bottom: 10px;
 }
 
 
@@ -546,47 +546,50 @@
             <h2>Certifications</h2>
             <div class="certifications-grid">
                 <div class="certification-card">
-                    <div class="badge">CERTIFIED</div>
-                    <h3>Architect</h3>
-                    <p>Sharing and Visibility Architect</p>
+                    <div class="badge"><img src="logos/ApplicationArchitect.png" alt="Profile Picture" class="certification-img"></div>
+                    <h3>Salesforce Application Architect</h3>
                 </div>
                 <div class="certification-card">
-                    <div class="badge">CERTIFIED</div>
-                    <h3>Developer</h3>
-                    <p>Platform Developer I</p>
+                    <div class="badge"><img src="logos/DataArchitect.png" alt="Profile Picture" class="certification-img"></div>
+                    <h3>Salesforce Data Architect</h3>
                 </div>
                 <div class="certification-card">
-                    <div class="badge">CERTIFIED</div>
-                    <h3>Developer</h3>
-                    <p>OmniStudio Developer</p>
+                    <div class="badge"><img src="logos/SharingandVisibilityArchitect.png" alt="Profile Picture" class="certification-img"></div>
+                    <h3>Sharing and Visibility Architect</h3>
+                </div>
+                <div class="certification-card">
+                    <div class="badge"><img src="logos/PlatformDeveloperI.png" alt="Profile Picture" class="certification-img"></div>
+                    <h3>Platform Developer I</h3>
+                </div>
+                <div class="certification-card">
+                    <div class="badge"><img src="logos/OmnistudioDeveloper.png" alt="Profile Picture" class="certification-img"></div>
+                    <h3>OmniStudio Developer</h3>
                 </div>
                 
                 <div class="certification-card">
-                    <div class="badge">CERTIFIED</div>
-                    <h3>Develper</h3>
-                    <p>Salesforce Certified Health cloud developer</p>
+                    <div class="badge"><img src="logos/HealthCloud.png" alt="Profile Picture" class="certification-img"></div>
+                    <h3>Salesforce Certified Health cloud developer</h3>
                 </div>
                 <div class="certification-card">
-                    <div class="badge">CERTIFIED</div>
-                    <h3>Consultant</h3>
-                    <p>Salesforce Certified Data cloud consultant</p>
+                    <div class="badge"><img src="logos/DataCloudConsultant.png" alt="Profile Picture" class="certification-img"></div>
+                    <h3>Data Cloud Consultant</h3>
                 </div>
                 <div class="certification-card">
-                    <div class="badge">CERTIFIED</div>
-                    <h3>Administrator</h3>
-                    <p>Salesforce App Builder</p>
+                    <div class="badge"><img src="logos/AppBuilder.png" alt="Profile Picture" class="certification-img"></div>
+                    <h3>Platform App Builder</h3>
                 </div>
                 <div class="certification-card">
-                    <div class="badge">CERTIFIED</div>
-                    <h3>Administrator</h3>
-                    <p>Salesforce Certified Administrator</p>
+                    <div class="badge"><img src="logos/Administrator.png" alt="Profile Picture" class="certification-img"></div>
+                    <h3>Salesforce Certified Administrator</h3>
                 </div>
                 <div class="certification-card">
-                    <div class="badge">CERTIFIED</div>
-                    <h3>Administrator</h3>
-                    <p>Salesforce Associate</p>
+                    <div class="badge"><img src="logos/Associate.png" alt="Profile Picture" class="certification-img"></div>
+                    <h3>Salesforce Associate</h3>
                 </div>
-                
+                <div class="certification-card">
+                    <div class="badge"><img src="logos/MarketingCloudEmailSpecialist.png" alt="Profile Picture" class="certification-img"></div>
+                    <h3>Marketing cloud Email Specialist</h3>
+                </div>
             </div>
         </div>
     </section>
