@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keshav Agrawal - Academic Portfolio</title>
+    <!-- Cal floating-popup embed code begins -->
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "15min", { origin: "https://cal.com" });
+
+        Cal.ns["15min"]("floatingButton", { "calLink": "keshav-agrawal/15min", "config": { "layout": "week_view", "theme": "dark" }, "buttonText": "Book a Call", "buttonColor": "#00E5FF", "buttonTextColor": "#272729" });
+        Cal.ns["15min"]("ui", { "hideEventTypeDetails": false, "layout": "week_view" });
+    </script>
+    <!-- Cal floating-popup embed code ends -->
     <style>
         /* General Styles */
         body {
@@ -599,7 +608,9 @@
         <div class="container">
             <h2>Contact</h2>
             <p>If you are interested in collaborating or hiring me for a project, feel free to reach out.</p>
-            <button onclick="location.href='mailto:keshavagrawalkka1999@gmail.com'">Contact Me</button>
+            <button data-cal-link="keshav-agrawal/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view","theme":"dark"}' style="border-radius: 30px;">
+                <i class="fas fa-calendar-alt"></i> Connect with Me
+            </button>
         </div>
     </section>
     <footer>
