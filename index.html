@@ -1,628 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keshav Agrawal - Academic Portfolio</title>
-    <!-- Cal floating-popup embed code begins -->
-    <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", "15min", { origin: "https://cal.com" });
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Keshav Agrawal — Salesforce Architect specializing in Salesforce Field Service. 11x Salesforce certified, building enterprise-grade solutions across Health, Service, and Experience Cloud." />
+  <title>Keshav Agrawal · Salesforce Architect</title>
 
-        Cal.ns["15min"]("floatingButton", { "calLink": "keshav-agrawal/15min", "config": { "layout": "week_view", "theme": "dark" }, "buttonText": "Book a Call", "buttonColor": "#00E5FF", "buttonTextColor": "#272729" });
-        Cal.ns["15min"]("ui", { "hideEventTypeDetails": false, "layout": "week_view" });
-    </script>
-    <!-- Cal floating-popup embed code ends -->
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #272729; /* Dark background */
-            color: #f2f2f2; /* Light text color */
-            line-height: 1.6;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-        a {
-            color: #00E5FF; /* Teal accent color */
-            text-decoration: none;
-        }
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%81%EF%B8%8F%3C/text%3E%3C/svg%3E" />
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #1e1e1f; /* Darker background */
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: flex-end; /* Align items to the right */
-        }
-
-        nav a {
-            font-size: 1.1rem;
-            font-weight: 500;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        nav a:hover {
-            background: rgba(0, 229, 255, 0.1); /* Teal hover effect */
-            color: #00E5FF;
-        }
-
-        /* Header */
-        header {
-            position: relative;
-            padding: 40px 20px; /* Reduced padding for sleek look */
-            background-image: url('https://via.placeholder.com/1500x500'); /* Background image */
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            text-align: center; /* Center align content */
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(39, 39, 41, 0.9), rgba(39, 39, 41, 0.6)); /* Gradient overlay */
-        }
-
-        .profile-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center align profile section */
-            position: relative;
-            z-index: 1;
-        }
-
-        .profile-img {
-            width: 120px; /* Reduced size */
-            height: 120px; /* Reduced size */
-            border-radius: 50%;
-            border: 4px solid #fff; /* White border */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px;
-        }
-
-        .profile-info h1 {
-            font-size: 2rem; /* Reduced font size */
-            margin: 0;
-            font-weight: 700;
-            color: #00E5FF; /* Teal accent color */
-        }
-
-        .profile-info p {
-            font-size: 1.1rem; /* Reduced font size */
-            margin: 10px 0 0;
-            color: #f2f2f2; /* Light text color */
-        }
-
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            margin: 0 10px; /* Adjusted margin */
-            font-size: 1.5rem;
-            color: #f2f2f2; /* Light text color */
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #00E5FF; /* Teal accent color */
-        }
-
-        /* Sections */
-        section {
-            padding: 60px 0; /* Reduced padding */
-            background-color: #1e1e1f; /* Darker background */
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        section h2 {
-            font-size: 2rem; /* Reduced font size */
-            margin-bottom: 20px; /* Reduced margin */
-            color: #00E5FF; /* Teal accent color */
-            font-weight: 700;
-            text-align: center;
-        }
-
-        section p {
-            font-size: 1rem; /* Reduced font size */
-            color: #f2f2f2; /* Light text color */
-        }
-
-        /* About Section */
-        .about p {
-            font-size: 1.1rem; /* Reduced font size */
-            text-align: center;
-            margin: 0 auto;
-        }
-
-       
-
-        /* Experience Section */
-        .experience {
-            position: relative;
-        }
-
-        .timeline {
-            position: relative;
-            margin: 0 auto;
-            padding: 20px 0; /* Reduced padding */
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: #00E5FF; /* Teal timeline line */
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            padding: 20px 40px;
-            position: relative;
-            width: 50%;
-            background: #2a2a2b; /* Darker background for timeline items */
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-sizing: border-box;
-        }
-
-        .timeline-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            right: -10px;
-            width: 20px;
-            height: 20px;
-            background: #00E5FF; /* Teal dot */
-            border-radius: 50%;
-            box-shadow: 0 0 0 4px #1e1e1f, 0 0 0 6px #00E5FF;
-        }
-
-        .timeline-item:nth-child(even)::before {
-            left: -10px;
-            right: auto;
-        }
-
-        .timeline-item h3 {
-            font-size: 1.2rem; /* Reduced font size */
-            margin: 0;
-            color: #00E5FF; /* Teal accent color */
-        }
-
-        .timeline-item p {
-            margin: 10px 0 0;
-            color: #f2f2f2; /* Light text color */
-        }
-
-        .timeline-item .date {
-            font-size: 0.9rem;
-            color: #00E5FF; /* Teal accent color */
-            font-weight: 500;
-        }
-
-        /* Education Section */
-        .education .degree {
-            background: #2a2a2b; /* Darker background for education items */
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .education .degree:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-
-        .education .degree h3 {
-            font-size: 1.2rem; /* Reduced font size */
-            margin: 0;
-            color: #00E5FF; /* Teal accent color */
-        }
-
-        .education .degree p {
-            margin: 10px 0 0;
-            color: #f2f2f2; /* Light text color */
-        }
-
-        /* Projects Section */
-        .projects .project {
-            background: #2a2a2b; /* Darker background for project items */
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .projects .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-
-        .projects .project h3 {
-            font-size: 1.2rem; /* Reduced font size */
-            margin: 0;
-            color: #00E5FF; /* Teal accent color */
-        }
-
-        .projects .project p {
-            margin: 10px 0 0;
-            color: #f2f2f2; /* Light text color */
-        }
-
-/* Certifications Section */
-.certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.certification-card {
-    background: #2a2a2b; /* Darker background for certification cards */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.certification-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-.certification-img {
-    width: 90px; /* Reduced size */
-    height: 90px; /* Reduced size */
-    margin-bottom: 10px;
-}
-
-.certification-card h3 {
-    font-size: 1rem; /* Reduced font size */
-    margin: 0 0 10px;
-    
-}
-
-.certification-card p {
-    font-size: 1rem; /* Reduced font size */
-    color: #f2f2f2; /* Light text color */
-}
-
-.certification-card .badge {
-    color: #fff;
-}
-
-
-    /* skills Section */
-    .skills {
-        text-align: center;
-        padding: 20px 0; /* Reduced padding */
-    }
-    
-    .skills-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px; /* Increased spacing */
-        justify-content: center;
-        margin: 0 auto;
-    }
-
-    .skill-tag {
-        background-color: #2c2c2c;
-        color: white;
-        padding: 10px 18px;
-        border-radius: 25px;
-        font-size: 16px;
-        font-weight: 500;
-        display: inline-block;
-        transition: all 0.3s ease;
-    }
-
-    .skill-tag:hover {
-        background-color: #00d1ff;
-        color: #000;
-    }
-
-        /* Contact Section */
-        .contact {
-            text-align: center;
-        }
-
-        .contact button {
-            background: #00E5FF; /* Teal button */
-            color: #272729; /* Dark text color */
-            border: none;
-            padding: 12px 24px;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .contact button:hover {
-            background: #00b8d4; /* Darker teal on hover */
-            transform: translateY(-3px);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1e1e1f; /* Darker background */
-            margin-top: 40px;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: #f2f2f2; /* Light text color */
-        }
-        
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Cal.com embed (loads on demand via data-cal-link attributes) -->
+  <script>
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "15min", { origin: "https://cal.com" });
+    Cal.ns["15min"]("ui", { theme: "dark", cssVarsPerTheme: { dark: { "cal-brand": "#00d4ff" } }, hideEventTypeDetails: false, layout: "month_view" });
+  </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+  <!-- Animated background -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-gradient-orb orb-1"></div>
+  <div class="bg-gradient-orb orb-2"></div>
+  <div class="bg-gradient-orb orb-3"></div>
+  <div class="bg-grid"></div>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="profile-section">
-                <img src="assets/prof-photo-v5.png" alt="Profile Picture" class="profile-img">
-                <div class="profile-info">
-                    <h1>Keshav Agrawal</h1>
-                    <p><strong>Senior Salesforce Developer and Consultant</strong></p>
-                    <p>Senior Salesforce Developer with In-depth Knowledge of Salesforce Platform Tools and Technologies including Apex, LWC, Aura, Flows, Apex Triggers, JavaScript, Field Service Lightning, Omnistudio/Vlocity, Conga and Salesforce Integrations.</p>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/keshav-agrawal99" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="http://github.com/keshav012" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://x.com/Keshav_agrawal9" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="mailto:keshavagrawalkka1999@gmail.com"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+  <!-- Custom cursor (sharp crosshair) -->
+  <div class="cursor-cross" aria-hidden="true">
+    <span class="cx-line cx-h"></span>
+    <span class="cx-line cx-v"></span>
+    <span class="cx-corner cx-tl"></span>
+    <span class="cx-corner cx-tr"></span>
+    <span class="cx-corner cx-bl"></span>
+    <span class="cx-corner cx-br"></span>
+  </div>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Senior Salesforce Developer</h3>
-                    <p><i class="fas fa-briefcase"></i>  <strong>  Innovior Probe CX</strong></p>
-                    <p class="date"><i class="fas fa-calendar-alt"></i>  Sep 2023 - Present</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Senior Salesforce Developer</h3>
-                    <p><i class="fas fa-briefcase"></i>  <strong>  Nagarro Software</strong></p>
-                    <p class="date"><i class="fas fa-calendar-alt"></i>  Aug 2022 - Sep 2023</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Salesforce Developer</h3>
-                    <p><i class="fas fa-briefcase"></i>  <strong>  Metacube Software</strong></p>
-                    <p class="date"><i class="fas fa-calendar-alt"></i>  Aug 2020 - Sep 2022</p>
-                </div>
-            </div>
+  <!-- Loading screen -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">KA</div>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-logo">
+      <span class="logo-mark">K</span>
+      <span class="logo-text">Keshav</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <button type="button" class="nav-cta"
+            data-cal-link="keshav-agrawal/15min"
+            data-cal-namespace="15min"
+            data-cal-config='{"layout":"month_view","theme":"dark"}'>
+      <span class="nav-cta-pulse"></span>
+      <span>Book a Call</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z"/></svg>
+    </button>
+    <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="drawer" id="mobile-drawer" aria-hidden="true">
+    <ul class="drawer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <button type="button" class="drawer-cta"
+            data-cal-link="keshav-agrawal/15min"
+            data-cal-namespace="15min"
+            data-cal-config='{"layout":"month_view","theme":"dark"}'>
+      <span class="nav-cta-pulse"></span>
+      <span>Book a Call</span>
+    </button>
+    <div class="drawer-socials">
+      <a href="https://linkedin.com/in/keshav-agrawal99" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/keshav012" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="mailto:keshavagrawalkka1999@gmail.com">Email ↗</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <div class="hero-tag" data-reveal>
+          <span class="status-dot"></span>
+          <span>Available for new architecture engagements</span>
         </div>
+
+        <h1 class="hero-title" data-reveal>
+          <span class="line">Architecting</span>
+          <span class="line">
+            <span class="grad-text">Salesforce</span>
+          </span>
+          <span class="line">at scale<span class="cursor-blink">_</span></span>
+        </h1>
+
+        <div class="hero-meta" data-reveal>
+          <div class="hero-bio">
+            <p>
+              I'm <strong>Keshav Agrawal</strong> — a Salesforce Architect specializing in
+              <span class="hl">Field Service</span>, Health Cloud, and OmniStudio.
+              I design and ship enterprise-grade solutions that mobilise field workforces,
+              connect distributed data, and turn complex business logic into shipped product.
+            </p>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-num" data-count="7" data-suffix="+">0</div>
+              <div class="stat-label">Years on Platform</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num" data-count="11">0</div>
+              <div class="stat-label">Salesforce Certs</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num" data-count="30" data-suffix="+">0</div>
+              <div class="stat-label">Enterprise Projects</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions" data-reveal>
+          <a href="#projects" class="btn btn-primary">
+            <span>View Selected Work</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <span>Get in touch</span>
+          </a>
+        </div>
+
+        <div class="hero-socials" data-reveal>
+          <a href="https://linkedin.com/in/keshav-agrawal99" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          </a>
+          <a href="https://github.com/keshav012" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.9.1 3.2.9.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0012 .3"/></svg>
+          </a>
+          <a href="https://x.com/Keshav_agrawal9" target="_blank" rel="noopener" aria-label="X / Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="mailto:keshavagrawalkka1999@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+
+        <div class="scroll-cue" data-reveal>
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+
+      <!-- Floating tech badges -->
+      <div class="floating-badges">
+        <div class="float-badge b1">⚡ Field Service</div>
+        <div class="float-badge b2">☁️ Health Cloud</div>
+        <div class="float-badge b3">{ } Apex</div>
+        <div class="float-badge b4">⟨/⟩ LWC</div>
+        <div class="float-badge b5">◇ OmniStudio</div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="project">
-                <h3><i class="fas fa-cloud"></i> Salesforce Health Cloud Solutions</h3>
-                <ul class="project-details">
-                    <li><i class="fas fa-code"></i> <strong>Technologies Used:</strong> LWC, Apex, OmniStudio, Conga</li>
-                    <li><i class="fas fa-server"></i> Built and deployed <strong>custom Salesforce solutions</strong> on Health Cloud.</li>
-                    <li><i class="fas fa-laptop-code"></i> <strong>Demonstrated expertise</strong> in Sales, Service, and Experience Cloud.</li>
-                    <li><i class="fas fa-user-graduate"></i> Mentored and <strong>guided junior developers</strong>, fostering a learning environment.</li>
-                    <li><i class="fas fa-comments"></i> Collaborated with stakeholders to <strong>gather requirements & define specifications</strong>.</li>
-                    <li><i class="fas fa-shield-alt"></i> Ensured compliance with <strong>Salesforce security standards & best practices</strong>.</li>
-                    <li><i class="fas fa-check-circle"></i> Conducted <strong>code reviews, testing, and deployments</strong> for high-quality delivery.</li>
-                </ul>
-            </div>
-            <div class="project">
-                <h3><i class="fas fa-cogs"></i> Salesforce Development & Implementation</h3>
-                <ul class="project-details">
-                    <li><i class="fas fa-tasks"></i> Worked on <strong>full application development lifecycle</strong>: Analysis, Design, Coding, Testing & Implementation.</li>
-                    <li><i class="fas fa-microchip"></i> Extensive experience with <strong>Apex, triggers, batch Apex, Visualforce</strong>.</li>
-                    <li><i class="fas fa-database"></i> Strong understanding of <strong>Salesforce data model</strong>, custom objects, and relationships.</li>
-                    <li><i class="fas fa-users"></i> Effective communicator with <strong>business and development teams</strong>.</li>
-                    <li><i class="fas fa-code-branch"></i> Experience with <strong>Object-Oriented development & design patterns</strong>.</li>
-                    <li><i class="fas fa-upload"></i> Expertise in <strong>complex enterprise deployment & Force.com Metadata API</strong>.</li>
-                    <li><i class="fas fa-exchange-alt"></i> Built integrations using <strong>SFDC Web Services API & third-party tools</strong>.</li>
-                    <li><i class="fas fa-tools"></i> Hands-on experience in <strong>Agile methodologies & continuous improvements</strong>.</li>
-                </ul>
-            </div>
-            <div class="project">
-                <h3><i class="fas fa-wrench"></i> Custom Salesforce Feature Development</h3>
-                <ul class="project-details">
-                    <li><i class="fas fa-laptop-code"></i> Responsible for developing <strong>custom features</strong> on the Salesforce platform based on client requirements.</li>
-                    <li><i class="fas fa-code"></i> Used <strong>Apex, Flows, LWC, Aura, HTML, CSS, and Triggers</strong> for development.</li>
-                    <li><i class="fas fa-lightbulb"></i> Conducted <strong>technical analysis and solution designing</strong> for scalable implementations.</li>
-                    <li><i class="fas fa-server"></i> Deployed features across <strong>various environments</strong>, from developer sandbox to production.</li>
-                    <li><i class="fas fa-tools"></i> Ensured <strong>best practices and code optimization</strong> for performance and maintainability.</li>
-                </ul>
-            </div>
-            
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="section-header" data-reveal>
+        <h2 class="section-title">About<span class="grad-text">.</span></h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <p class="lead">
+            7+ years deep in the Salesforce ecosystem, building solutions that move the needle
+            for enterprises across <strong>healthcare, field operations, and customer experience</strong>.
+          </p>
+          <p>
+            My focus is <strong>Salesforce Field Service</strong> — the messy, mission-critical
+            slice of Salesforce where dispatchers, mobile workers, scheduling engines, and
+            real-world assets all need to behave as one system. I architect end-to-end:
+            from data model and territory design to mobile flows, work-order automation,
+            and the integrations that make it all real.
+          </p>
+          <p>
+            Beyond Field Service, I lead delivery on Health Cloud, OmniStudio (Vlocity),
+            Conga, and complex Salesforce integrations. I mentor developers, run code
+            reviews, and obsess over security, scalability, and the developer experience
+            of the orgs I leave behind.
+          </p>
+
+          <div class="about-traits">
+            <div class="trait"><span>◆</span> Architecture-first thinking</div>
+            <div class="trait"><span>◆</span> Code & config, not either/or</div>
+            <div class="trait"><span>◆</span> Mentor & code reviewer</div>
+            <div class="trait"><span>◆</span> Security & scale by default</div>
+          </div>
         </div>
+
+        <aside class="about-card" data-reveal>
+          <div class="card-header">
+            <div class="window-dots"><span></span><span></span><span></span></div>
+            <div class="card-title">profile.json</div>
+          </div>
+          <pre class="card-body"><code><span class="t-key">"name"</span>: <span class="t-str">"Keshav Agrawal"</span>,
+<span class="t-key">"role"</span>: <span class="t-str">"Salesforce Architect"</span>,
+<span class="t-key">"focus"</span>: [
+  <span class="t-str">"Field Service"</span>,
+  <span class="t-str">"Health Cloud"</span>,
+  <span class="t-str">"OmniStudio"</span>
+],
+<span class="t-key">"location"</span>: <span class="t-str">"Jaipur, India"</span>,
+<span class="t-key">"experience"</span>: <span class="t-num">7</span>,
+<span class="t-key">"certifications"</span>: <span class="t-num">11</span>,
+<span class="t-key">"clouds"</span>: [
+  <span class="t-str">"Sales"</span>, <span class="t-str">"Service"</span>,
+  <span class="t-str">"Health"</span>, <span class="t-str">"Experience"</span>,
+  <span class="t-str">"Field Service"</span>, <span class="t-str">"Data"</span>
+]</code></pre>
+        </aside>
+      </div>
     </section>
 
-     <!-- Skills Section -->
-     <section id="skills" class="projects">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-list">
-                <span class="skill-tag">Salesforce</span>
-                <span class="skill-tag">Apex</span>
-                <span class="skill-tag">Lightning Web Components (LWC)</span>
-                <span class="skill-tag">OmniStudio</span>
-                <span class="skill-tag">Visualforce</span>
-                <span class="skill-tag">SOQL & SOSL</span>
-                <span class="skill-tag">Salesforce Data Model</span>
-                <span class="skill-tag">REST & SOAP APIs</span>
-                <span class="skill-tag">Agile Methodologies</span>
-                <span class="skill-tag">HTML & CSS</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">CI/CD & Deployment</span>
-            </div>
-        </div>
+    <!-- EXPERTISE -->
+    <section id="expertise" class="section expertise">
+      <div class="section-header" data-reveal>
+        <h2 class="section-title">Expertise<span class="grad-text">.</span></h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="expertise-grid">
+        <article class="exp-card exp-feature" data-reveal>
+          <div class="exp-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3>Salesforce Field Service</h3>
+          <p>End-to-end FSL implementations: work orders, service appointments, territories, scheduling policies, optimisation, mobile flows, and asset management for distributed workforces.</p>
+          <ul class="exp-list">
+            <li>Dispatcher Console & Gantt configuration</li>
+            <li>Scheduling policies & resource optimisation</li>
+            <li>Field Service Mobile (offline flows)</li>
+            <li>Work Order automation via Apex & Flow</li>
+          </ul>
+          <div class="exp-glow"></div>
+        </article>
+
+        <article class="exp-card" data-reveal>
+          <div class="exp-icon">{ }</div>
+          <h3>Apex & Platform</h3>
+          <p>Triggers, batch & queueable Apex, async patterns, Lightning Web Components, Aura, Visualforce. Test coverage that means something.</p>
+          <div class="exp-tags">
+            <span>Apex</span><span>LWC</span><span>Aura</span><span>SOQL/SOSL</span>
+          </div>
+        </article>
+
+        <article class="exp-card" data-reveal>
+          <div class="exp-icon">◇</div>
+          <h3>OmniStudio / Vlocity</h3>
+          <p>OmniScripts, FlexCards, DataRaptors, Integration Procedures — declarative-first orchestration without sacrificing maintainability.</p>
+          <div class="exp-tags">
+            <span>OmniScript</span><span>FlexCards</span><span>IP</span><span>DataRaptor</span>
+          </div>
+        </article>
+
+        <article class="exp-card" data-reveal>
+          <div class="exp-icon">⚕</div>
+          <h3>Health Cloud</h3>
+          <p>Patient data models, care plans, EHR integrations, and HIPAA-aware sharing & visibility built on top of platform primitives.</p>
+          <div class="exp-tags">
+            <span>Care Plans</span><span>EHR</span><span>HIPAA</span>
+          </div>
+        </article>
+
+        <article class="exp-card" data-reveal>
+          <div class="exp-icon">⇄</div>
+          <h3>Integrations</h3>
+          <p>REST & SOAP APIs, Platform Events, Named Credentials, External Services, MuleSoft patterns, and Conga document automation.</p>
+          <div class="exp-tags">
+            <span>REST</span><span>SOAP</span><span>Platform Events</span><span>Conga</span>
+          </div>
+        </article>
+
+        <article class="exp-card" data-reveal>
+          <div class="exp-icon">⚙</div>
+          <h3>DevOps & Delivery</h3>
+          <p>CI/CD pipelines with SFDX, Git-based release management, Agile delivery, code reviews, and sandbox-to-prod governance.</p>
+          <div class="exp-tags">
+            <span>SFDX</span><span>Git</span><span>CI/CD</span><span>Agile</span>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="degree">
-                <h3>B.Tech / B.E. in Computer Science</h3>
-                <p><strong>Graduated with Honors</strong></p>
-                <p><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan, India</p>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section experience">
+      <div class="section-header" data-reveal>
+        <h2 class="section-title">Experience<span class="grad-text">.</span></h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <article class="tl-item" data-reveal>
+          <div class="tl-dot"></div>
+          <div class="tl-meta">
+            <span class="tl-date">Sep 2023 — Present</span>
+            <span class="tl-tag tl-tag-current">Current</span>
+          </div>
+          <div class="tl-card">
+            <div class="tl-role">
+              <h3>Senior Salesforce Developer</h3>
+              <span class="tl-company">Innovior Probe CX</span>
             </div>
-            <div class="degree">
-                <h3>Higher School</h3>
-                <p><strong>Specialized in Science</strong></p>
-                <p><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan, India</p>
+            <p>Architecting and delivering Health Cloud and Field Service solutions for enterprise clients. Leading code reviews, mentoring developers, and owning solution design from discovery through deployment.</p>
+            <ul class="tl-list">
+              <li>End-to-end Health Cloud implementations with OmniStudio orchestration</li>
+              <li>Field Service work-order automation and dispatcher experience</li>
+              <li>Cross-cloud integrations and Conga document workflows</li>
+            </ul>
+            <div class="tl-stack">
+              <span>LWC</span><span>Apex</span><span>OmniStudio</span><span>Field Service</span><span>Health Cloud</span><span>Conga</span>
             </div>
-        </div>
+          </div>
+        </article>
+
+        <article class="tl-item" data-reveal>
+          <div class="tl-dot"></div>
+          <div class="tl-meta">
+            <span class="tl-date">Aug 2022 — Sep 2023</span>
+          </div>
+          <div class="tl-card">
+            <div class="tl-role">
+              <h3>Senior Salesforce Developer</h3>
+              <span class="tl-company">Nagarro Software</span>
+            </div>
+            <p>Delivered enterprise Salesforce features end-to-end: requirements analysis, technical design, build, test, and deployment. Strengthened code quality and release practices across the team.</p>
+            <ul class="tl-list">
+              <li>Custom solution build using Apex, Flows, LWC, and Aura</li>
+              <li>Integration design with REST/SOAP and external systems</li>
+              <li>Sandbox-to-production deployment governance</li>
+            </ul>
+            <div class="tl-stack">
+              <span>Apex</span><span>LWC</span><span>Flows</span><span>Triggers</span><span>REST</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl-item" data-reveal>
+          <div class="tl-dot"></div>
+          <div class="tl-meta">
+            <span class="tl-date">Aug 2020 — Sep 2022</span>
+          </div>
+          <div class="tl-card">
+            <div class="tl-role">
+              <h3>Salesforce Developer</h3>
+              <span class="tl-company">Metacube Software</span>
+            </div>
+            <p>Cut my teeth on the platform — full lifecycle delivery from analysis through implementation, building data models, custom objects, triggers, and integrations.</p>
+            <ul class="tl-list">
+              <li>Object-Oriented design patterns on the Force.com platform</li>
+              <li>Metadata API and complex deployment workflows</li>
+              <li>SFDC Web Services integrations with third-party tools</li>
+            </ul>
+            <div class="tl-stack">
+              <span>Apex</span><span>Visualforce</span><span>Triggers</span><span>Metadata API</span>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-        <div class="container">
-            <h2>Certifications</h2>
-            <div class="certifications-grid">
-                <div class="certification-card">
-                    <div class="badge"><img src="logos/ApplicationArchitect.png" alt="Profile Picture" class="certification-img"></div>
-                    <h3>Salesforce Application Architect</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="badge"><img src="logos/DataArchitect.png" alt="Profile Picture" class="certification-img"></div>
-                    <h3>Salesforce Data Architect</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="badge"><img src="logos/SharingandVisibilityArchitect.png" alt="Profile Picture" class="certification-img"></div>
-                    <h3>Sharing and Visibility Architect</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="badge"><img src="logos/PlatformDeveloperI.png" alt="Profile Picture" class="certification-img"></div>
-                    <h3>Platform Developer I</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="badge"><img src="logos/OmnistudioDeveloper.png" alt="Profile Picture" class="certification-img"></div>
-                    <h3>OmniStudio Developer</h3>
-                </div>
-                
-                <div class="certification-card">
-                    <div class="badge"><img src="logos/HealthCloud.png" alt="Profile Picture" class="certification-img"></div>
-                    <h3>Salesforce Certified Health cloud developer</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="badge"><img src="logos/DataCloudConsultant.png" alt="Profile Picture" class="certification-img"></div>
-                    <h3>Data Cloud Consultant</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="badge"><img src="logos/AppBuilder.png" alt="Profile Picture" class="certification-img"></div>
-                    <h3>Platform App Builder</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="badge"><img src="logos/Administrator.png" alt="Profile Picture" class="certification-img"></div>
-                    <h3>Salesforce Certified Administrator</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="badge"><img src="logos/Associate.png" alt="Profile Picture" class="certification-img"></div>
-                    <h3>Salesforce Associate</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="badge"><img src="logos/MarketingCloudEmailSpecialist.png" alt="Profile Picture" class="certification-img"></div>
-                    <h3>Marketing cloud Email Specialist</h3>
-                </div>
-            </div>
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section certifications">
+      <div class="section-header" data-reveal>
+        <h2 class="section-title">Certifications<span class="grad-text">.</span></h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <p class="certs-lead" data-reveal>11x Salesforce Certified — across <strong>Architect</strong>, <strong>Developer</strong>, and <strong>Consultant</strong> tracks.</p>
+
+      <div class="certs-grid">
+        <div class="cert cert-architect" data-reveal>
+          <div class="cert-badge">⬡</div>
+          <h4>Application Architect</h4>
+          <span class="cert-track">Architect</span>
         </div>
+        <div class="cert cert-architect" data-reveal>
+          <div class="cert-badge">⬡</div>
+          <h4>Data Architect</h4>
+          <span class="cert-track">Architect</span>
+        </div>
+        <div class="cert cert-architect" data-reveal>
+          <div class="cert-badge">⬡</div>
+          <h4>Sharing & Visibility Architect</h4>
+          <span class="cert-track">Architect</span>
+        </div>
+        <div class="cert cert-developer" data-reveal>
+          <div class="cert-badge">{ }</div>
+          <h4>Platform Developer I</h4>
+          <span class="cert-track">Developer</span>
+        </div>
+        <div class="cert cert-developer" data-reveal>
+          <div class="cert-badge">{ }</div>
+          <h4>OmniStudio Developer</h4>
+          <span class="cert-track">Developer</span>
+        </div>
+        <div class="cert cert-developer" data-reveal>
+          <div class="cert-badge">{ }</div>
+          <h4>Health Cloud Developer</h4>
+          <span class="cert-track">Developer</span>
+        </div>
+        <div class="cert cert-consultant" data-reveal>
+          <div class="cert-badge">◎</div>
+          <h4>Data Cloud Consultant</h4>
+          <span class="cert-track">Consultant</span>
+        </div>
+        <div class="cert cert-builder" data-reveal>
+          <div class="cert-badge">▲</div>
+          <h4>Platform App Builder</h4>
+          <span class="cert-track">Builder</span>
+        </div>
+        <div class="cert cert-admin" data-reveal>
+          <div class="cert-badge">⚙</div>
+          <h4>Administrator</h4>
+          <span class="cert-track">Admin</span>
+        </div>
+        <div class="cert cert-admin" data-reveal>
+          <div class="cert-badge">⚙</div>
+          <h4>Salesforce Associate</h4>
+          <span class="cert-track">Foundation</span>
+        </div>
+        <div class="cert cert-marketing" data-reveal>
+          <div class="cert-badge">✉</div>
+          <h4>Marketing Cloud Email Specialist</h4>
+          <span class="cert-track">Marketing</span>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>If you are interested in collaborating or hiring me for a project, feel free to reach out.</p>
-            <button data-cal-link="keshav-agrawal/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view","theme":"dark"}' style="border-radius: 30px;">
-                <i class="fas fa-calendar-alt"></i> Connect with Me
-            </button>
-        </div>
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="section-header" data-reveal>
+        <h2 class="section-title">Selected Work<span class="grad-text">.</span></h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="projects-stack">
+        <article class="project" data-reveal>
+          <div class="project-meta">
+            <span class="project-num">01</span>
+            <span class="project-type">Health Cloud · Enterprise</span>
+          </div>
+          <h3 class="project-title">Health Cloud Solution Suite</h3>
+          <p class="project-desc">Architected and deployed custom Health Cloud solutions integrating patient care plans with OmniStudio orchestration and Conga document automation. Mentored junior developers, gathered requirements with clinical stakeholders, and enforced HIPAA-aligned sharing & visibility patterns.</p>
+          <div class="project-stack">
+            <span>LWC</span><span>Apex</span><span>OmniStudio</span><span>Conga</span><span>Health Cloud</span>
+          </div>
+          <div class="project-highlights">
+            <div><strong>Sales · Service · Experience</strong> Cloud integration</div>
+            <div><strong>Code reviews</strong> & deployment governance</div>
+            <div><strong>Security-first</strong> architecture</div>
+          </div>
+        </article>
+
+        <article class="project" data-reveal>
+          <div class="project-meta">
+            <span class="project-num">02</span>
+            <span class="project-type">Field Service · Architecture</span>
+          </div>
+          <h3 class="project-title">Field Service Lifecycle Implementation</h3>
+          <p class="project-desc">End-to-end Salesforce delivery covering analysis, design, coding, testing, and rollout. Built object-oriented Apex frameworks, batch processes, and complex Metadata API deployments for enterprise field-service operations.</p>
+          <div class="project-stack">
+            <span>Field Service</span><span>Apex</span><span>Batch</span><span>Triggers</span><span>Metadata API</span>
+          </div>
+          <div class="project-highlights">
+            <div><strong>Force.com</strong> data model design</div>
+            <div><strong>Web Services API</strong> integrations</div>
+            <div><strong>Agile</strong> delivery cadence</div>
+          </div>
+        </article>
+
+        <article class="project" data-reveal>
+          <div class="project-meta">
+            <span class="project-num">03</span>
+            <span class="project-type">Custom Build · Multi-Cloud</span>
+          </div>
+          <h3 class="project-title">Custom Feature Engineering at Scale</h3>
+          <p class="project-desc">Designed and shipped tailored Salesforce features against client requirements — Apex, Flows, LWC, Aura, Triggers — deployed across sandbox-to-production pipelines with code optimisation and best-practice governance baked in.</p>
+          <div class="project-stack">
+            <span>LWC</span><span>Aura</span><span>Flows</span><span>Apex</span><span>HTML/CSS</span>
+          </div>
+          <div class="project-highlights">
+            <div><strong>Technical analysis</strong> → solution design</div>
+            <div><strong>Sandbox → Prod</strong> deployment</div>
+            <div><strong>Best-practice</strong> code optimisation</div>
+          </div>
+        </article>
+      </div>
     </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Keshav Agrawal. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/keshav-agrawal99" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="http://github.com/keshav012" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/Keshav_agrawal9" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:keshavagrawalkka1999@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="contact-inner">
+        <div class="contact-eyebrow" data-reveal>Let's build something</div>
+        <h2 class="contact-title" data-reveal>
+          Got a Salesforce challenge<br />
+          worth <span class="grad-text">solving</span>?
+        </h2>
+        <p class="contact-sub" data-reveal>
+          Whether it's a Field Service rollout, a Health Cloud build, or a complex
+          integration — I'd love to hear about it.
+        </p>
+
+        <button type="button" class="contact-cta" data-reveal
+                data-cal-link="keshav-agrawal/15min"
+                data-cal-namespace="15min"
+                data-cal-config='{"layout":"month_view","theme":"dark"}'>
+          <span class="cta-label">Book a 15-min intro call</span>
+          <span class="cta-mail">Pick a time that works for you</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </button>
+
+        <a href="mailto:keshavagrawalkka1999@gmail.com" class="contact-mail-alt" data-reveal>
+          <span>or email</span>
+          <strong>keshavagrawalkka1999@gmail.com</strong>
+        </a>
+
+        <div class="contact-socials" data-reveal>
+          <a href="https://linkedin.com/in/keshav-agrawal99" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/keshav012" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://x.com/Keshav_agrawal9" target="_blank" rel="noopener">X / Twitter ↗</a>
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <span>© 2026 Keshav Agrawal</span>
+      <span class="footer-mid">Designed & built from scratch · Jaipur, India</span>
+      <a href="#home" class="footer-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
